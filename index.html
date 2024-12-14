@@ -56,7 +56,30 @@
         document.querySelector(".side_menu").classList.toggle("side_menu_open")
     })
     document.querySelector(".side_menu_item > button").addEventListener("click", (event) => {
-        document.querySelector(".side_menu_item > button").classList.toggle("side_menu_item_open")
+
+        const side_menu_item_button = document.querySelector(".side_menu_item > button")
+        side_menu_item_button.classList.toggle("side_menu_item_open")
+
+        const is_open = side_menu_item_button.classList.contains("side_menu_item_open")
+        if(is_open){
+            let total_height = 0
+            side_menu_item_button.parentNode.querySelectorAll("ul>li").forEach(li => {
+                total_height += li.clientHeight
+            });
+            side_menu_item_button.parentNode.querySelector("ul").style.maxHeight = total_height + "px"
+        }
+        else{
+            side_menu_item_button.parentNode.querySelector("ul").style.maxHeight = 0
+        }
+
     })
+
+    document.querySelectorAll('.side_menu_item > ul').forEach(ul => {
+        let total_height = 0;
+        ul.querySelectorAll('li').forEach(li => {
+            total_height += li.clientHeight
+        })
+
+    });
 </script>
 </html>

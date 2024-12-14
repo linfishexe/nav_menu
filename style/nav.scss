@@ -3,6 +3,7 @@
     border: 0;
     padding: 0;
     position: relative;
+    -webkit-tap-highlight-color:transparent;
 }
 
 a{
@@ -126,7 +127,7 @@ nav{
         transform: scaleY(0);
         transform-origin: 50% 0;
         transition: transform .3s ease-in-out, background-color .3s ease-in-out;
-        ul{
+        & > ul{
             padding-top: 80px;
             list-style: none;
             margin-top: 1rem;
@@ -142,16 +143,19 @@ nav{
                     transition: transform .3s ease-in-out;
                 }
                 ul{
-                    display: none;
                     width: 100%;
                     padding-top: 0px;
-                    background-color: #313131;
+                    transition: max-height .3s ease-in-out, padding-top 0s linear 0.3s;
+                    max-height: 0;
+                    overflow-y: hidden;
+                    li {
+                        background-color: #313131;
+                    }
                 }
                 .side_menu_item>li{
                     display: block;
                     line-height: 2rem;
                     text-align: center;
-                    transition: display .3s ease-in-out;
                 }
             }
             
@@ -164,7 +168,8 @@ nav{
     .side_menu_item_open{
         transform: rotate(90deg);
         & ~ ul {
-            display: block !important;
+            padding-top: 10px !important;
+            transition: max-height .3s ease-in-out, padding-top 0s linear 0s !important;
         }
     }
     
