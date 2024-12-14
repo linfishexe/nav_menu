@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/nav.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <h1 class="logo">logo</h1>
+
+        <ul class="top_menu">
+            <li><a href="">首頁</a></li>
+            <li><a href="">快閃</a></li>
+            <li class="have_items"><a href="">魔法史萊姆</a>
+                <ul>
+                    <li><a href="">主題1</a></li>
+                    <li><a href="">主題2</a></li>
+                </ul>
+            </li>
+            <li><a href="">創意手做</a></li>
+            <li><a href="">儲值會員</a></li>
+            <li><a href="">預約</a></li>
+        </ul>
+        <button class="side_menu_button">
+            <div></div>
+            <div></div>
+        </button>
+        <div class="side_menu">
+            <ul>
+                <li><a href="">首頁</a></li>
+                <li><a href="">快閃</a></li>
+                <li class="side_menu_item">
+                    <button>＞</button>
+                    <a href="">魔法史萊姆</a>
+                    <ul>
+                        <li><a href="">主題1</a></li>
+                        <li><a href="">主題2</a></li>
+                    </ul>
+                </li>
+                <li><a href="">創意手做</a></li>
+                <li><a href="">儲值會員</a></li>
+                <li><a href="">預約</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <main></main>
+    <footer></footer>
+</body>
+<script>
+    document.querySelector(".side_menu_button").addEventListener("click", () => {
+        document.querySelector(".side_menu_button").classList.toggle("side_menu_button_open")
+        document.querySelector(".side_menu").classList.toggle("side_menu_open")
+    })
+    document.querySelector(".side_menu_item > button").addEventListener("click", (event) => {
+        document.querySelector(".side_menu_item > button").classList.toggle("side_menu_item_open")
+    })
+</script>
+</html>

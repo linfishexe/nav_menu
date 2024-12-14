@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(0, 0, 0);
+}
+nav .logo {
+  position: absolute;
+  left: 120px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-image: url("https://picsum.photos/50");
+  background-position: center;
+  text-indent: -9999px;
+}
+nav .top_menu {
+  display: flex;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav .top_menu > li {
+  list-style: none;
+  display: inline;
+  text-align: center;
+}
+nav .top_menu > li a {
+  margin: 0 1.5rem;
+  transition: color 0.4s;
+}
+nav .top_menu > li a:hover {
+  color: rgb(207, 25, 192);
+}
+nav .top_menu > li::before {
+  width: 0%;
+  height: 1px;
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  background-color: #ccc;
+  transition: width 0.3s ease-in-out;
+  left: 50%;
+  transform: translateX(-50%);
+}
+nav .top_menu > li:hover::before {
+  width: 80%;
+}
+nav .top_menu .have_items ul {
+  width: 100%;
+  position: absolute;
+  display: none;
+  padding-top: 1rem;
+}
+nav .top_menu .have_items ul li {
+  display: block;
+  line-height: 2rem;
+  text-align: center;
+  background-color: rgb(85, 204, 204);
+}
+nav .top_menu .have_items:hover ul {
+  display: block;
+}
+nav .side_menu_button {
+  position: absolute;
+  display: none;
+  width: 25px;
+  height: 20px;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  z-index: 1;
+}
+nav .side_menu_button div {
+  display: block;
+  height: 1px;
+  background-color: #ccc;
+  top: 0;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease-in-out, top 0.2s ease-in-out 0.2s;
+}
+nav .side_menu_button div:nth-child(2) {
+  margin-top: 9px;
+}
+nav .side_menu_button_open div:nth-child(1) {
+  top: 5px;
+  transform: rotate(45deg);
+  transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+}
+nav .side_menu_button_open div:nth-child(2) {
+  top: -5px;
+  transform: rotate(-45deg);
+  transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+}
+nav .side_menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(198, 31, 31, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleY(0);
+  transform-origin: 50% 0;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+nav .side_menu ul {
+  padding-top: 80px;
+  list-style: none;
+  margin-top: 1rem;
+}
+nav .side_menu ul li {
+  text-align: center;
+  padding: 1rem 0;
+}
+nav .side_menu ul li a {
+  color: #ccc;
+}
+nav .side_menu ul li button {
+  background-color: transparent;
+  color: #ccc;
+  transition: transform 0.3s ease-in-out;
+}
+nav .side_menu ul li ul {
+  display: none;
+  width: 100%;
+  padding-top: 0px;
+  background-color: #313131;
+}
+nav .side_menu ul li .side_menu_item > li {
+  display: block;
+  line-height: 2rem;
+  text-align: center;
+  transition: display 0.3s ease-in-out;
+}
+nav .side_menu_open {
+  transform: scaleX(1);
+  background-color: rgb(0, 0, 0);
+}
+nav .side_menu_item_open {
+  transform: rotate(90deg);
+}
+nav .side_menu_item_open ~ ul {
+  display: block !important;
+}
+
+/* RWD */
+@media screen and (max-width: 920px) {
+  nav .side_menu_button {
+    display: block;
+  }
+  nav .logo {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  nav .top_menu {
+    display: none;
+  }
+}/*# sourceMappingURL=nav.css.map */
