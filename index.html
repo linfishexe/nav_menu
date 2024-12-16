@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/nav.css">
+    <link rel="stylesheet" href="./style/index.css">
     <title>Document</title>
 </head>
 <body>
     <nav>
-        <h1 class="logo">logo</h1>
+        <a target="_self"><h1 class="logo">THE MooMoo</h1></a>
 
         <ul class="top_menu">
             <li><a href="">首頁</a></li>
-            <li><a href="">快閃</a></li>
-            <li class="have_items"><a href="">魔法史萊姆</a>
-                <ul>
-                    <li><a href="">主題1</a></li>
-                    <li><a href="">主題2</a></li>
-                </ul>
+            <li class="have_items"><a href="">產品</a>
+                <!-- <ul>
+                    <li><a href="">史萊姆</a></li>
+                    <li><a href="">沙畫</a></li>
+                    <li><a href="">黏土</a></li>
+                </ul> -->
             </li>
-            <li><a href="">創意手做</a></li>
-            <li><a href="">儲值會員</a></li>
-            <li><a href="">預約</a></li>
+            <li><a href="">教學影片</a></li>
+            <li><a href="">關於我們</a></li>
+            <li><a href="">預約資訊</a></li>
         </ul>
         <button class="side_menu_button">
             <div></div>
@@ -45,10 +46,89 @@
             </ul>
         </div>
     </nav>
-    
+    <header>
+        <div id="banner">
+            <img src="./img/logo.png" alt="">
+        </div>
+    </header>
 
-    <main></main>
-    <footer></footer>
+    <main>
+        <section id="trope">
+            <div>
+                <h2>創立理念</h2>
+                <p>
+                    樂姆姆的誕生源於對手工藝的熱愛，旨在傳遞獨一無二的藝術價值與生活美學。<br>
+                    Lemumu was born from the love of crafts and aims to convey unique artistic value and life aesthetics.
+                </p>
+            </div>
+           
+        </section>
+        <section id="produce">
+            <div>
+                <a href="">
+                    <img src="./img/沙畫.png" alt="">
+                    <article><b>沙畫</b></article>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                     <img src="./img/史萊姆.jpg" alt="">
+                    <article><b>史萊姆</b></article>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <img src="./img/流體雄.jpg" alt="">
+                    <article><b>流體熊</b></article>
+                </a>
+                
+            </div>
+        </section>
+        <section id="feedback">
+                <div class="pic">
+                    <img src="./img/顧客1.jpg" alt="">
+                </div>
+                <div class="message">
+                    <div>
+                        <p><b>Hsu Joba</b> 「一試成主顧 來第五次每次都超開心」</p>
+                        <small>2024/00/00</small>
+                    </div>
+                    <div>
+                        <p><b>吳井</b> 「一試成主顧 來第五次每次都超開心」</p>
+                        <small>2024/00/00</small>
+                    </div>
+                    <div>
+                        <p><b>值得信賴</b> 「一試成主顧 來第五次每次都超開心」</p>
+                        <small>2024/00/00</small>
+                    </div>
+                </div>
+        </section>
+        <section id="NEWS">
+            <div class="container">
+                <img src="./img/聖誕活動.jpg" alt="">
+                <img src="./img/萬聖節活動.jpg" alt="">
+                <img src="./img/banner2.jpg" alt="">
+            </div>
+            <button onclick="left_refresh"> < </button>
+            <button onclick="right_refresh"> > </button>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <div class="info">
+                <h4>本店資訊</h4>
+                <address>
+                    <p>史萊姆-樂姆姆手作 </p>
+                    <p>新店小碧潭京站廣場5樓、汐止遠雄廣場3樓</p>
+                    <p>新北市汐止區新台五路93號3樓 </p>
+                </address>
+            </div>
+        </section>
+        <section class="Copyright">
+            <p><small>Copyright © 2024 TheMooMoo. All Rights Reserved</small></p>
+        </section>
+        
+    </footer>
 </body>
 <script>
     document.querySelector(".side_menu_button").addEventListener("click", () => {
@@ -81,5 +161,25 @@
         })
 
     });
+
+    let index = 0
+    function refresh(){
+        let NEWS = document.querySelector("#NEWS")
+        let width = getComputedStyle(NEWS).width
+        width = Number(width.slice(0,-2))
+
+        NEWS.querySelector(".container").style.left = index * width * -1 + "px"
+    }
+
+    function right_refresh(){
+        index--
+        refresh()
+    }
+
+    function left_refresh(){
+        index++
+        refresh()
+    }
+    refresh()
 </script>
 </html>

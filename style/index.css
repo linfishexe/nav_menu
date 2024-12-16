@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+header {
+  height: 100vh;
+}
+header #banner img {
+  width: 50%;
+  margin-top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+main section {
+  margin: 40px 0;
+  padding: 20px 0;
+}
+main #trope div {
+  width: 1000px;
+  background-color: #efefef;
+  padding: 20px 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  border: 3px solid #6FBFB7;
+}
+main #trope div h2 {
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 0.5rem;
+}
+main #trope div p {
+  padding-top: 20px;
+  text-align: center;
+  line-height: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+main #produce {
+  background-color: #6FBFB7;
+  display: flex;
+  justify-content: center;
+}
+main #produce div {
+  width: 300px;
+  padding: 20px 10px;
+  display: flex-wrap;
+}
+main #produce div img {
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  width: 60%;
+  border: 3px solid #efefef;
+  border-radius: 50%;
+}
+main #produce div article {
+  font-size: 1.1rem;
+  margin-top: 50px;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+main #feedback {
+  display: flex;
+}
+main #feedback div img {
+  width: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 0px;
+  border-radius: 20% 50%;
+}
+main #feedback .pic {
+  width: 50%;
+}
+main #feedback .message div {
+  width: 400px;
+  margin: 20px 0;
+  padding: 30px;
+  border: 3px solid #6FBFB7;
+  border-radius: 50px;
+  margin-left: 80px;
+}
+main #feedback .message div p {
+  text-align: center;
+  color: #6FBFB7;
+}
+main #feedback .message div small {
+  left: 300px;
+  color: #526765;
+  margin-top: 10px;
+}
+main #NEWS .container {
+  height: 600px;
+  display: flex;
+  overflow: hidden;
+}
+main #NEWS .container img {
+  width: 100%;
+  flex-shrink: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+footer {
+  background: #6FBFB7;
+  color: #fff;
+}
+footer section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 5vw;
+}
+footer section div {
+  width: max(25%, 400px);
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+footer section div h4 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+footer section div p {
+  text-align: center;
+}
+footer .Copyright {
+  padding: 10px 0;
+  background: #33605b;
+}
+footer .Copyright p {
+  text-align: center;
+}/*# sourceMappingURL=index.css.map */
