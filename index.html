@@ -180,11 +180,8 @@
         }else if( index > 2 ){
             index = 0
         }
-        let NEWS = document.querySelector("#NEWS")
-        let width = getComputedStyle(NEWS).width
-        width = Number(width.slice(0,-2))
-
-        NEWS.querySelector(".container").style.left = index * width * -1 + "px"
+        
+        NEWS.querySelector(".container").style.left = index * 100 * -1 + "vw"
     }
 
     function right_refresh(){
