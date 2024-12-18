@@ -1,12 +1,3 @@
-* {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  position: relative;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
-}
-
 header {
   height: min(100vh, 100vw);
   padding-top: 80px;
@@ -104,7 +95,11 @@ main #feedback .message div small {
   margin-top: 10px;
 }
 main #NEWS {
+  display: flex;
   overflow: hidden;
+}
+main #NEWS .NEWS_title {
+  left: 20px;
 }
 main #NEWS .container {
   transition: left 0.3s;
@@ -112,8 +107,10 @@ main #NEWS .container {
   display: flex;
 }
 main #NEWS .container div {
-  width: 100vw;
+  width: 30%;
   flex-shrink: 0;
+  border: 1px solid #33605b;
+  margin: 0 1.5rem;
 }
 main #NEWS .container div img {
   width: 100%;
@@ -159,39 +156,6 @@ main #NEWS button:nth-of-type(4) {
   left: 50%;
   bottom: 0;
   transform: translateX(calc(-50% + 2rem));
-}
-
-footer {
-  background: #6FBFB7;
-  color: #fff;
-}
-footer section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 5vw;
-}
-footer section div {
-  width: max(25%, 400px);
-  margin: 15px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-footer section div h4 {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 30px;
-}
-footer section div p {
-  text-align: center;
-}
-footer .Copyright {
-  padding: 10px 0;
-  background: #33605b;
-}
-footer .Copyright p {
-  text-align: center;
 }
 
 @media screen and (max-width: 1100px) {

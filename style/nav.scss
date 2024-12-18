@@ -3,6 +3,7 @@
     border: 0;
     padding: 0;
     position: relative;
+    box-sizing: border-box;
     -webkit-tap-highlight-color:transparent;
 }
 
@@ -129,7 +130,7 @@ nav{
     .side_menu{
         width: 100vw;
         height: 100vh;
-        background-color: rgba(198, 31, 31, 0);
+        background-color: rgba(255, 255, 255, 0);
         position: absolute;
         top: 0;
         left: 0;
@@ -144,11 +145,11 @@ nav{
                 text-align: center;
                 padding: 1rem 0;
                 a{
-                    color: #ccc;
+                    color: #000000;
                 }
                 button{
                     background-color: transparent;
-                    color: #ccc;
+                    color: #000000;
                     transition: transform .3s ease-in-out;
                 }
                 ul{
@@ -172,7 +173,7 @@ nav{
     }
     .side_menu_open{
         transform: scaleX(1);
-        background-color: rgb(0, 0, 0);
+        background-color: #ffffff;
     }
     .side_menu_item_open{
         transform: rotate(90deg);
@@ -184,6 +185,38 @@ nav{
     
 }
 
+footer{
+    background: #6FBFB7;
+    color: #fff;
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 5vw;
+        div{
+            width: max(25%, 400px);
+            margin: 15px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            h4{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            p{
+                text-align: center;
+            }
+        }
+    }
+    .Copyright{
+        padding: 10px 0;
+        background: #33605b;
+        p{
+            text-align: center;
+        }
+    }
+}
 /* RWD */
 @media screen and (max-width: 1100px){
     nav{
