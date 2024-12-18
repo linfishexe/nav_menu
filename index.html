@@ -94,23 +94,35 @@
                         <small>2024/00/00</small>
                     </div>
                     <div>
-                        <p><b>吳井</b> 「一試成主顧 來第五次每次都超開心」</p>
+                        <p><b>吳井</b> 「很用心的手作課 非常推薦」」</p>
                         <small>2024/00/00</small>
                     </div>
                     <div>
-                        <p><b>值得信賴</b> 「一試成主顧 來第五次每次都超開心」</p>
+                        <p><b>值得信賴</b> 「每次購買都讓我感受到品質的保證，樂姆姆的手作讓我愛不釋手。」</p>
                         <small>2024/00/00</small>
                     </div>
                 </div>
         </section>
         <section id="NEWS">
             <div class="container">
-                <img src="./img/聖誕活動.jpg" alt="">
-                <img src="./img/萬聖節活動.jpg" alt="">
-                <img src="./img/banner2.jpg" alt="">
+                <div>
+                    <img src="./img/聖誕活動.jpg" alt="">
+                    <p>聖誕活動</p>
+                </div>
+                <div>
+                    <img src="./img/萬聖節活動.jpg" alt="">
+                    <p>聖誕活動</p>
+                </div>
+                <div>
+                    <img src="./img/banner2.jpg" alt="">
+                    <p>聖誕活動</p>
+                </div>
             </div>
-            <button onclick="left_refresh"> < </button>
-            <button onclick="right_refresh"> > </button>
+            <button onclick="left_refresh()"> ＜ </button>
+            <button onclick="SetIndex(0)"> 1 </button>
+            <button onclick="SetIndex(1)"> 2 </button>
+            <button onclick="SetIndex(2)"> 3 </button>
+            <button onclick="right_refresh()"> ＞ </button>
         </section>
     </main>
     <footer>
@@ -153,7 +165,6 @@
         }
 
     })
-
     document.querySelectorAll('.side_menu_item > ul').forEach(ul => {
         let total_height = 0;
         ul.querySelectorAll('li').forEach(li => {
@@ -164,6 +175,11 @@
 
     let index = 0
     function refresh(){
+        if ( index < 0 ) {
+            index = 2
+        }else if( index > 2 ){
+            index = 0
+        }
         let NEWS = document.querySelector("#NEWS")
         let width = getComputedStyle(NEWS).width
         width = Number(width.slice(0,-2))
@@ -172,12 +188,16 @@
     }
 
     function right_refresh(){
-        index--
+        index++
         refresh()
     }
 
     function left_refresh(){
-        index++
+        index--
+        refresh()
+    }
+    function SetIndex(idx){
+        index = idx
         refresh()
     }
     refresh()

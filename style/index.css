@@ -98,16 +98,41 @@ main #feedback .message div small {
   color: #526765;
   margin-top: 10px;
 }
+main #NEWS {
+  overflow: hidden;
+}
 main #NEWS .container {
   height: 600px;
   display: flex;
-  overflow: hidden;
 }
-main #NEWS .container img {
-  width: 100%;
+main #NEWS .container div {
+  width: 100vw;
   flex-shrink: 0;
+}
+main #NEWS .container div img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+main #NEWS .container div p {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main #NEWS button {
+  background-color: #33605b;
+}
+main #NEWS button:nth-child(1) {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+main #NEWS button:nth-child(2) {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 footer {
