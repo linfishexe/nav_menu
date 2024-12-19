@@ -59,11 +59,22 @@ main #produce div article {
   text-align: center;
   letter-spacing: 0.1rem;
 }
-main #feedback {
+main #Business_time h3 {
+  margin-top: 20px;
+  margin-left: 60px;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+main #Business_time > div {
   display: flex;
   justify-content: center;
 }
-main #feedback div img {
+main #Business_time > div .pic {
+  margin: 0 5%;
+  margin-bottom: 5vh;
+}
+main #Business_time > div .pic img {
   max-width: 300px;
   width: 100%;
   left: 50%;
@@ -71,11 +82,7 @@ main #feedback div img {
   border: 0px;
   border-radius: 20% 50%;
 }
-main #feedback .pic {
-  margin: 0 5%;
-  margin-bottom: 5vh;
-}
-main #feedback .message div {
+main #Business_time > div .message div {
   width: 500px;
   left: 50%;
   transform: translateX(-50%);
@@ -84,11 +91,11 @@ main #feedback .message div {
   border: 3px solid #6FBFB7;
   border-radius: 1rem;
 }
-main #feedback .message div p {
+main #Business_time > div .message div p {
   text-align: center;
   color: #6FBFB7;
 }
-main #feedback .message div small {
+main #Business_time > div .message div small {
   display: block;
   text-align: end;
   color: #526765;

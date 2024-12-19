@@ -1,0 +1,93 @@
+header {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+header img {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main section {
+  height: auto;
+  margin: 40px 0;
+}
+main #member h2 {
+  text-align: center;
+}
+main #member div {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+main #member div img {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #FFF;
+  border-radius: 50%;
+}
+main #member div div {
+  display: block;
+  margin-left: 40px;
+}
+main #member div div article {
+  width: 60%;
+  box-sizing: border-box;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  line-height: 40px;
+  padding: 10px;
+  letter-spacing: 0.1rem;
+}
+main #member div div p {
+  margin-top: 30px;
+  text-align: start;
+  line-height: 1.5rem;
+}
+main #social_media {
+  display: flex;
+  justify-content: center;
+  background-color: #6FBFB7;
+  padding: 20px;
+}
+main #social_media a {
+  width: 200px;
+  margin-left: 80px;
+}
+main #social_media a div {
+  justify-content: center;
+}
+main #social_media a div img {
+  width: 150px;
+}
+main #Comment h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+main #Comment .content {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+main #Comment .content div {
+  width: 600px;
+  max-width: 600px;
+  border: 1px solid #CCC;
+  margin: 0 2rem;
+  padding: 20px;
+}
+main #Comment .content div img {
+  left: 50%;
+  width: 100%;
+  height: 250px;
+  transform: translateX(-50%);
+}/*# sourceMappingURL=about.css.map */
