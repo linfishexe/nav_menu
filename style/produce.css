@@ -15,32 +15,9 @@ main section {
   margin: 40px 0;
   padding: 20px 0;
 }
-main #feature h2 {
-  text-align: center;
-}
-main #feature .content {
-  display: flex;
-  top: 40px;
-  justify-content: center;
-}
-main #feature .content div {
-  width: 350px;
-  border: 1px solid #CCC;
-  border-radius: 50px;
-  margin: 0 2rem;
-  padding: 20px;
-}
-main #feature .content div img {
-  width: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-main #feature .content div article {
-  padding: 20px 0;
-  text-align: center;
-}
 main #porduce h2 {
   text-align: center;
+  letter-spacing: 0.1rem;
 }
 main #porduce .content {
   display: flex;

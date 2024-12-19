@@ -18,7 +18,7 @@ nav {
   height: 80px;
   background-color: #ffffff;
   position: fixed;
-  z-index: 1;
+  z-index: 99;
 }
 nav a:has(.logo) {
   -webkit-user-select: none;
@@ -47,7 +47,7 @@ nav .top_menu > li a {
   transition: color 0.4s;
 }
 nav .top_menu > li a:hover {
-  color: #000000;
+  color: #bf6f6f;
 }
 nav .top_menu > li::before {
   width: 0%;
@@ -55,7 +55,7 @@ nav .top_menu > li::before {
   content: "";
   position: absolute;
   bottom: -10px;
-  background-color: #000000;
+  background-color: #bf6f6f;
   transition: width 0.3s ease-in-out;
   left: 50%;
   transform: translateX(-50%);
@@ -166,36 +166,52 @@ nav .side_menu_item_open ~ ul {
 }
 
 footer {
-  background: #6FBFB7;
-  color: #fff;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  color: #000000;
 }
 footer section {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 5vw;
+  padding: 20px;
+}
+footer section .F_logo {
+  width: 15%;
+  height: 15%;
+  margin: 40px 2rem;
 }
 footer section div {
   width: max(25%, 400px);
   margin: 15px;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
-footer section div h4 {
+footer section div h3 {
+  display: flex;
+  align-items: center;
   width: 100%;
-  text-align: center;
-  margin-bottom: 30px;
 }
 footer section div p {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  line-height: 1rem;
+}
+footer section div a {
+  display: flex;
+  align-items: center;
+}
+footer section div a img {
+  width: 6%;
+  margin-right: 1rem;
 }
 footer .Copyright {
   padding: 10px 0;
-  background: #33605b;
+  border-top: 1px solid #ccc;
+  margin-bottom: 3rem;
 }
 footer .Copyright p {
-  text-align: center;
+  left: 20px;
 }
 
 /* RWD */

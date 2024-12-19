@@ -21,11 +21,9 @@ main{
         margin: 40px 0;
     }
     #member{
-        // background-image: url(../img/未命名-1.png);
-        // flex-shrink: 0;
-        // object-fit: cover;
         h2{
             text-align: center;
+            font-size: 1.5rem;
         }
         div{
             display: flex;
@@ -38,49 +36,44 @@ main{
                 border-radius: 50%;
             }
             div{
+                width: 50%;
                 display: block;
                 margin-left: 40px;
                 article{
-                    width: 60%;
+                    width: 100%;
                     box-sizing: border-box;
-                    border-top: 2px solid #000;
-                    border-bottom: 2px solid #000;
+                    border-bottom: 2px solid #bf6f6f;
                     line-height: 40px;
                     padding: 10px;
                     letter-spacing: 0.1rem;
+                    font-size: 1.5rem;
+                    color: #c14d4d;
                 }
                 p{
                     margin-top: 30px;
                     text-align: start;
-                    line-height: 1.5rem;
+                    line-height: 2rem;
                 }
             }
-            
-            .left{
-                
-            }
-            .right{
-            }
-            }
-        
+        }
     }
     #social_media{
         display: flex;
         justify-content: center;
-        background-color: #6FBFB7;
+        background-color: #bf6f6f;
         padding: 20px;
         a{
-            width: 200px;
-            margin-left: 80px;
-            div{
-                justify-content: center;
-                img{
-                    width: 150px;
-                }
+            width: 250px;
+            justify-content: center;
+            border-right: 1px solid #fff;
+            img{
+                width: 20%;
+                left: 50%;
+                transform: translateX(-50%);
             }
-        }
-        &:nth-child(2){
-
+            &:nth-child(1){
+                border-left: 1px solid #fff;
+            }
         }
     }
     #Comment{

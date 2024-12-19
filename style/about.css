@@ -23,6 +23,7 @@ main section {
 }
 main #member h2 {
   text-align: center;
+  font-size: 1.5rem;
 }
 main #member div {
   display: flex;
@@ -36,38 +37,43 @@ main #member div img {
   border-radius: 50%;
 }
 main #member div div {
+  width: 50%;
   display: block;
   margin-left: 40px;
 }
 main #member div div article {
-  width: 60%;
+  width: 100%;
   box-sizing: border-box;
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #bf6f6f;
   line-height: 40px;
   padding: 10px;
   letter-spacing: 0.1rem;
+  font-size: 1.5rem;
+  color: #c14d4d;
 }
 main #member div div p {
   margin-top: 30px;
   text-align: start;
-  line-height: 1.5rem;
+  line-height: 2rem;
 }
 main #social_media {
   display: flex;
   justify-content: center;
-  background-color: #6FBFB7;
+  background-color: #bf6f6f;
   padding: 20px;
 }
 main #social_media a {
-  width: 200px;
-  margin-left: 80px;
-}
-main #social_media a div {
+  width: 250px;
   justify-content: center;
+  border-right: 1px solid #fff;
 }
-main #social_media a div img {
-  width: 150px;
+main #social_media a img {
+  width: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main #social_media a:nth-child(1) {
+  border-left: 1px solid #fff;
 }
 main #Comment h2 {
   text-align: center;

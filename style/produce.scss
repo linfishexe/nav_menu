@@ -14,35 +14,10 @@ main{
         margin: 40px 0;
         padding: 20px 0;
     }
-    #feature{
-        h2{
-            text-align: center;
-        }
-        .content{
-            display: flex;
-            top: 40px;
-            justify-content: center;
-            div{
-                width: 350px;
-                border: 1px solid #CCC;
-                border-radius: 50px;
-                margin: 0 2rem;
-                padding: 20px;
-                img{
-                    width: 50%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                }
-                article{
-                    padding: 20px 0;
-                    text-align: center;
-                }
-            }
-        }
-    }
     #porduce{
         h2{
             text-align: center;
+            letter-spacing: 0.1rem;
         }
         .content{
             display: flex;
