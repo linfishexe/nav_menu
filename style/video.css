@@ -61,4 +61,10 @@ main section .video_container .container iframe {
   width: 100%;
   aspect-ratio: 4/3;
   max-height: 630px;
+}
+
+@media screen and (max-width: 800px) {
+  main section button.prev, main section button.next {
+    width: 10%;
+  }
 }/*# sourceMappingURL=video.css.map */

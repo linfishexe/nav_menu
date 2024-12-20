@@ -86,7 +86,7 @@ main{
             justify-content: center;
             margin-bottom: 40px;
             div{
-                width: 600px;
+                width: 90%;
                 max-width: 600px;
                 border: 1px solid #CCC;
                 margin: 0 2rem;
@@ -94,10 +94,49 @@ main{
                 img{
                     left: 50%;
                     width: 100%;
-                    height: 250px;
+                    height: 200px;
                     transform: translateX(-50%);
                 }
             }
             }
     }
+}
+//RWD------------------------------
+@media screen and (max-width: 750px) {
+    main{
+        #member{
+        &>div{
+            flex-wrap: wrap;
+            div{
+                width: 60%;
+                min-width: 350px;
+                order: 1;
+                margin-left: 0;
+                article{
+                    text-align: center;
+                }
+            }
+            img { order: 0; }
+        }
+    }
+        #social_media{
+            a{
+                width: 30%;
+                border: none;
+                &:nth-child(1){ border: none; }
+            }
+        }
+        #Comment{
+            .content{
+                flex-wrap: wrap;
+                div{
+                    margin: 0 .5rem;
+                    &:nth-child(2){
+                        margin-top: 40px;
+                    }
+                }
+            }
+        }
+    }
+    
 }

@@ -56,3 +56,14 @@ main{
         }
     }   
 }
+//RWD--------------------
+@media screen and (max-width: 800px) {
+    main{
+        section{
+            button.prev, button.next{
+                width: 10%;
+            }   
+        }
+    }
+    
+}

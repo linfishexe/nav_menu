@@ -189,7 +189,7 @@ footer{
         .F_logo{
             width: 15%;
             height: 15%;
-            margin: 40px 2rem;
+            margin: 40px 5rem;
         }
         div{
             width: max(25%, 400px);
@@ -243,6 +243,25 @@ footer{
         a:has(.logo) { 
             left: 50%;
             transform: translate(-50%, -50%);
+        }
+    }
+}
+@media screen and (max-width: 1290px){
+    footer{
+        section{
+            .F_logo{
+                display: none;
+            }
+            &>div{
+                height: 150px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 750px){
+    footer{
+        section{
+            flex-wrap: wrap;
         }
     }
 }

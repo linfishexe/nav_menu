@@ -24,7 +24,9 @@ main{
             top: 40px;
             justify-content: center;
             div{
-                width: 300px;
+                min-width: 300px;
+                width: 85%;
+                max-width: 350px;
                 height: 400px;
                 border: 1px solid #CCC;
                 margin: 0 2rem;
@@ -41,14 +43,29 @@ main{
                 }
                 button{
                     width: 100px;
-                    font-size: 1.5rem;
+                    font-size: 0.8rem;
+                    cursor: pointer;
                     border: 1px solid #000000;
                     border-radius: 20px;
                     position: absolute;
-                    right: 1rem;
+                    right: 20px;
                     bottom: 2rem;
+                    padding: 10px;
                 }
             }
             }
         }
+}
+//RWD----------------
+@media screen and (max-width: 1100px) {
+    main{
+        #porduce {
+            .content{
+                flex-wrap: wrap;
+                & > div{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
 }
