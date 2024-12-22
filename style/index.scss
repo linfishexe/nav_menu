@@ -121,7 +121,7 @@ main{
         .container{
             display: flex;
             transition: left .3s;
-            display: flex;
+            justify-content: center;
             & > div{
                 width: 30%;
                 min-width: 320px;

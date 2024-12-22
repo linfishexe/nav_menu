@@ -115,7 +115,7 @@ main #NEWS h2 {
 main #NEWS .container {
   display: flex;
   transition: left 0.3s;
-  display: flex;
+  justify-content: center;
 }
 main #NEWS .container > div {
   width: 30%;
