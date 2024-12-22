@@ -17,8 +17,6 @@ main #trope {
   width: 80%;
   left: 50%;
   transform: translateX(-50%);
-  border-top: 1px solid #bf6f6f;
-  border-bottom: 1px solid #bf6f6f;
 }
 main #trope div {
   width: 90%;
@@ -31,12 +29,36 @@ main #trope h2 {
   font-size: min(3rem, 7vw);
   text-align: center;
   letter-spacing: 0.5rem;
+  animation: show 1s ease-in-out 0s 1 normal none;
 }
 main #trope p {
   padding-top: 20px;
   text-align: center;
   line-height: 1.5rem;
   letter-spacing: 0.1rem;
+  animation: show 1s ease-in-out 0.3s 1 normal none;
+}
+main #trope::before {
+  width: 70%;
+  height: 2px;
+  background: #bf6f6f;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s;
+}
+main #trope::after {
+  width: 50%;
+  height: 2px;
+  background: #bf6f6f;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s;
 }
 main #produce {
   display: flex;

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/nav.css">
     <link rel="stylesheet" href="./style/index.css">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="/img/faviocn.ico">
+    <title>樂姆姆-首頁</title>
 </head>
 <body>
     <nav>
@@ -54,8 +55,8 @@
     <main>
         <section id="trope">
             <div>
-                <h2>創立理念</h2>
-                <p>
+                <h2  class="aos slideIn">創立理念</h2>
+                <p  class="aos slideIn">
                     樂姆姆的誕生源於對手工藝的熱愛，旨在傳遞獨一無二的藝術價值與生活美學。<br>
                     Lemumu was born from the love of crafts and aims to convey unique artistic value and life aesthetics.
                 </p>
@@ -89,7 +90,7 @@
         <section id="NEWS">
             <h2>TheMooMoo NEWS</h2>
             <div class="container">
-                <div>
+                <div class="aos slideIn">
                     <img src="./img/聖誕活動.jpg" alt="">
                     <div class="NEWS_infor">
                         <p>
@@ -101,8 +102,7 @@
                     </div>
                     
                 </div>
-                
-                <div>
+                <div class="aos slideIn">
                     <img src="./img/banner2.jpg" alt="">
                     <div class="NEWS_infor">
                         <p>
@@ -115,8 +115,8 @@
                 </div>
             </div>
         </section>
-        <section id="Business_time">
-                <div class="time">
+        <section id="Business_time" class="aos slideIn">
+                <div class="time" >
                     <h2>營業時間</h2>
                     <table>
                         <tr><td>週一</td><td>上午11:00 - 下午9:00</td></tr>
@@ -167,24 +167,6 @@
         document.querySelector(".side_menu_button").classList.toggle("side_menu_button_open")
         document.querySelector(".side_menu").classList.toggle("side_menu_open")
     })
-    document.querySelector(".side_menu_item > button").addEventListener("click", (event) => {
-
-        const side_menu_item_button = document.querySelector(".side_menu_item > button")
-        side_menu_item_button.classList.toggle("side_menu_item_open")
-
-        const is_open = side_menu_item_button.classList.contains("side_menu_item_open")
-        if(is_open){
-            let total_height = 0
-            side_menu_item_button.parentNode.querySelectorAll("ul>li").forEach(li => {
-                total_height += li.clientHeight
-            });
-            side_menu_item_button.parentNode.querySelector("ul").style.maxHeight = total_height + "px"
-        }
-        else{
-            side_menu_item_button.parentNode.querySelector("ul").style.maxHeight = 0
-        }
-
-    })
     document.querySelectorAll('.side_menu_item > ul').forEach(ul => {
         let total_height = 0;
         ul.querySelectorAll('li').forEach(li => {
@@ -218,5 +200,24 @@
         refresh()
     }
     refresh()
+
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return rect.bottom < 0 || rect.top > window.innerHeight;
+}
+
+function addClassToVisibleElements() {
+  var aosElements = document.querySelectorAll(".aos");
+  aosElements.forEach(function (aosElement) {
+    if (!isElementInViewport(aosElement)) aosElement.classList.add("ed");
+    else aosElement.classList.remove("ed");
+  });
+}
+
+document.addEventListener("scroll", addClassToVisibleElements);
+
+addClassToVisibleElements();
+
+
 </script>
 </html>

@@ -51,6 +51,11 @@ main{
                     right: 20px;
                     bottom: 2rem;
                     padding: 10px;
+                    transition: all .3 ease-in-out;
+                    &:hover{
+                        background-color: #bf6f6f;
+                        color: #fff;
+                    }
                 }
             }
             }

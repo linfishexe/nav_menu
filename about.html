@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/nav.css">
     <link rel="stylesheet" href="./style/about.css">
-    <title>Document</title>
+    <title>樂姆姆-關於我們</title>
 </head>
 <body>
     <nav>
@@ -54,7 +54,7 @@
     <main>
         <section id="member">
             <h2>優秀團隊</h2>
-            <div>
+            <div class="aos slideIn">
                 <img src="./img/p1.jpg" alt="">
                 <div>
                     <b><article>創意設計師</article></b>
@@ -62,14 +62,14 @@
                 </div>
                 
             </div>
-            <div>
+            <div class="aos slideIn">
                 <div>
                     <b><article>工藝專家</article></b>
                     <p>工藝專家具備深厚的手作技藝<br>專注於細節，確保每一件作品都達到高品質的標準。</p>
                 </div>
                 <img src="./img/p2.jpg" alt="">
             </div>
-            <div>
+            <div class="aos slideIn">
                 <img src="./img/p3.jpg" alt="">
                 <div>
                     <b><article>市場推廣專員</article></b>
@@ -77,7 +77,7 @@
                 </div>
                 </div>
         </section>
-        <section id="social_media">
+        <section id="social_media" class="aos slideIn">
             <a href="">
                     <img src="./img/instagram.png" alt="">
             </a>
@@ -92,18 +92,18 @@
         <section id="Comment">
             <h2>GOOGLE 評論</h2>
             <div class="content">
-                <div>
+                <div class="aos slideIn">
                     <img src="./img/評論1.png" alt="">
                 </div>
-                <div>
+                <div class="aos slideIn">
                     <img src="./img/評論2.png" alt="">
                 </div>
             </div>
             <div class="content">
-                <div>
+                <div class="aos slideIn">
                     <img src="./img/評論3.png" alt="">
                 </div>
-                <div>
+                <div class="aos slideIn">
                     <img src="./img/評論4.png" alt="">
                 </div>
             </div>
@@ -143,24 +143,6 @@
         document.querySelector(".side_menu_button").classList.toggle("side_menu_button_open")
         document.querySelector(".side_menu").classList.toggle("side_menu_open")
     })
-    document.querySelector(".side_menu_item > button").addEventListener("click", (event) => {
-
-        const side_menu_item_button = document.querySelector(".side_menu_item > button")
-        side_menu_item_button.classList.toggle("side_menu_item_open")
-
-        const is_open = side_menu_item_button.classList.contains("side_menu_item_open")
-        if(is_open){
-            let total_height = 0
-            side_menu_item_button.parentNode.querySelectorAll("ul>li").forEach(li => {
-                total_height += li.clientHeight
-            });
-            side_menu_item_button.parentNode.querySelector("ul").style.maxHeight = total_height + "px"
-        }
-        else{
-            side_menu_item_button.parentNode.querySelector("ul").style.maxHeight = 0
-        }
-
-    })
     document.querySelectorAll('.side_menu_item > ul').forEach(ul => {
         let total_height = 0;
         ul.querySelectorAll('li').forEach(li => {
@@ -168,5 +150,22 @@
         })
 
     });
+
+    function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return rect.bottom < 0 || rect.top > window.innerHeight;
+}
+
+function addClassToVisibleElements() {
+  var aosElements = document.querySelectorAll(".aos");
+  aosElements.forEach(function (aosElement) {
+    if (!isElementInViewport(aosElement)) aosElement.classList.add("ed");
+    else aosElement.classList.remove("ed");
+  });
+}
+
+document.addEventListener("scroll", addClassToVisibleElements);
+
+addClassToVisibleElements();
 </script>
 </html>
