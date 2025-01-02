@@ -44,7 +44,7 @@ main{
         &::before{
             width: 70%;
             height: 2px;
-            background: #bf6f6f;
+            background: #4d70c1;
             content: "";
             position: absolute;
             bottom: 0;
@@ -55,7 +55,7 @@ main{
         &::after{
             width: 50%;
             height: 2px;
-            background: #bf6f6f;
+            background: #4d70c1;
             content: "";
             position: absolute;
             top: 0;
@@ -95,7 +95,7 @@ main{
                 letter-spacing: 0.1rem;
             }
             &:hover {
-                box-shadow: 0 0 15px #bf6f6f;
+                box-shadow: 0 0 15px #4d70c1;
             }
         }
     }

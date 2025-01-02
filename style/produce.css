@@ -56,7 +56,7 @@ main #porduce .content div button {
   transition: all 0.3 ease-in-out;
 }
 main #porduce .content div button:hover {
-  background-color: #bf6f6f;
+  background-color: #4d70c1;
   color: #fff;
 }
 

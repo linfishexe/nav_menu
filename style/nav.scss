@@ -41,7 +41,7 @@ nav{
                 margin: 0 1.5rem;
                 transition: color .4s;
                 &:hover{
-                    color: #bf6f6f;
+                    color: #4d70c1;
                 }
             }
            &::before{
@@ -50,7 +50,7 @@ nav{
                 content: "";
                 position: absolute;
                 bottom: -10px;
-                background-color: #bf6f6f;
+                background-color: #4d70c1;
                 transition: width .3s ease-in-out;
                 left: 50%;
                 transform: translateX(-50%);

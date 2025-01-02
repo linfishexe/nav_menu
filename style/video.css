@@ -29,9 +29,9 @@ main section button.prev, main section button.next {
   width: 80px;
   aspect-ratio: 1/1;
   background-color: #fff;
-  border: 3px solid #bf6f6f;
+  border: 3px solid #4d70c1;
   border-radius: 50%;
-  color: #bf6f6f;
+  color: #3f5ca1;
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 1;

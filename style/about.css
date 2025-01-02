@@ -44,12 +44,12 @@ main #member div div {
 main #member div div article {
   width: 100%;
   box-sizing: border-box;
-  border-bottom: 2px solid #bf6f6f;
+  border-bottom: 2px solid #4d70c1;
   line-height: 40px;
   padding: 10px;
   letter-spacing: 0.1rem;
   font-size: 1.5rem;
-  color: #c14d4d;
+  color: #4d70c1;
 }
 main #member div div p {
   margin-top: 30px;
@@ -59,7 +59,7 @@ main #member div div p {
 main #social_media {
   display: flex;
   justify-content: center;
-  background-color: #bf6f6f;
+  background-color: #4d70c1;
   padding: 20px;
 }
 main #social_media a {

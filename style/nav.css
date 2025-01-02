@@ -47,7 +47,7 @@ nav .top_menu > li a {
   transition: color 0.4s;
 }
 nav .top_menu > li a:hover {
-  color: #bf6f6f;
+  color: #4d70c1;
 }
 nav .top_menu > li::before {
   width: 0%;
@@ -55,7 +55,7 @@ nav .top_menu > li::before {
   content: "";
   position: absolute;
   bottom: -10px;
-  background-color: #bf6f6f;
+  background-color: #4d70c1;
   transition: width 0.3s ease-in-out;
   left: 50%;
   transform: translateX(-50%);
